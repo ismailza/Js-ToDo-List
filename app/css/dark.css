@@ -1,0 +1,23 @@
+body {
+  background-color: #000;
+}
+.header {
+  background-color: darkblue;
+}
+.add-task #new-task {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+.add-task button {
+  background-color: darkblue;
+}
+.add-task button svg .fill {
+  fill: #fff;
+}
+.todo h4 {
+  color: #d6d4d4;
+}
+.todo ul li {
+  background-color: darkslategrey;
+  color: #fff;
+}

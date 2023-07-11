@@ -1,0 +1,216 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans';
+}
+.noFill {
+  fill: none;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.header .left, .header .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .left {
+  margin-left: 20px;
+}
+.header .left img {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+}
+.header .left h1 {
+  color: #2196F3;
+}
+.header .right {
+  float: right;
+  margin-right: 20px;
+  width: 80px;
+}
+.header .right .theme-button {
+  all: unset;
+  cursor: pointer;
+}
+.header .right #theme-icon {
+  width: 20px;
+  height: 20px;
+}
+.container {
+  top: 80px;
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.add-task {
+  width: 80%;
+}
+.add-task #new-task {
+  width: 100%;
+  height: 50px;
+  float: left;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent: 18px;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+}
+.add-task button {
+  width: 50px;
+  height: 50px;
+  right: 10%;
+  position:absolute;
+  z-index:2;
+  border-radius: 25px;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+}
+.add-task button svg {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -8px 0 0 -8px;
+}
+.todo {
+  width: 80%;
+  margin-top: 20px;
+}
+.todo h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.todo ul {
+  width: 100%;
+  float: left;
+}
+.todo ul li {
+  width: 100%;
+  min-height: 50px;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+  margin: 0 0 10px 0;
+  padding: 14px 100px 14px 14px;
+  word-break: break-word;
+}
+.todo ul li:last-of-type {
+  margin: 0;
+}
+.todo ul li .buttons {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.todo ul li .buttons button {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background: none;
+  position: relative;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+}
+.todo ul li .buttons button:last-of-type:before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background: #edf0f1;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.todo ul li .buttons button svg {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -11px 0 0 -11px;
+}
+.todo ul li .buttons button.complete svg {
+  border-radius: 11px;
+  border: 1.5px solid #25b99a;
+  transition: background 0.2s ease;
+}
+.todo ul#completed li .buttons button.complete svg {
+  background: #25b99a;
+  border: 0px;
+}
+.todo ul:not(#completed) li .buttons button.complete:hover svg {
+  background: rgba(37, 185, 154, 0.75);
+}
+.todo ul:not(#completed) li .buttons button.complete:hover svg .fill {
+  fill: #fff;
+}
+.todo ul#completed li .buttons button.complete svg .fill {
+  fill: #fff;
+}
+.todo ul li .buttons button svg .fill {
+  transition: fill 0.2s ease;
+}
+.todo ul li .buttons button.remove svg .fill {
+  fill: #c0cecb;
+}
+.todo ul li .buttons button.remove:hover svg .fill {
+  fill: #e85656;
+}
+.todo ul li .buttons button.complete svg .fill {
+  fill: #25b99a;
+}
+.todo ul#completed {
+  position: relative;
+}
+.todo:before {
+  content: '';
+  width: 150px;
+  height: 1px;
+  background: #d8e5e0;
+  position: absolute;
+  left: 50%;
+  margin: -10px 0 0 -75px;
+}
+.todo ul#todo:empty:after {
+  content: 'You have nothing to-do!';
+  margin: 15px 0 0 0;
+}
+.todo ul#completed:empty:after {
+  content: 'You have yet to complete any tasks.';
+  margin: 15px 0 0 0;
+}
+.todo ul#todo:after,
+.todo ul#completed:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
